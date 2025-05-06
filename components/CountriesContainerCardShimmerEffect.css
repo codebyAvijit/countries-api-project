@@ -1,0 +1,53 @@
+main .shimmer-card {
+  --shimmer-color: hsl(0, 0%, 78%);
+}
+
+main.dark .shimmer-card {
+  --shimmer-color: hsl(208, 21%, 34%);
+}
+
+.shimmer-card {
+  height: 250px;
+  background: linear-gradient(
+    90deg,
+    var(--shimmer-color) 25%,
+    #e0e0e0 50%,
+    var(--shimmer-color) 75%
+  );
+  background-size: 400px 100%;
+  animation: shimmer 1.2s infinite linear;
+  border-radius: 10px;
+}
+
+.shimmer-card .flag-container,
+.shimmer-card .card-title,
+.shimmer-card p {
+  background: linear-gradient(
+    90deg,
+    var(--shimmer-color) 25%,
+    #e0e0e0 50%,
+    var(--shimmer-color) 75%
+  );
+  background-size: 400px 100%;
+  animation: shimmer 1.2s infinite linear;
+  border-radius: 4px;
+}
+
+.shimmer-card .card-title {
+  height: 32px;
+  margin-bottom: 10px;
+}
+
+.shimmer-card p {
+  height: 22px;
+  margin-bottom: 8px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
